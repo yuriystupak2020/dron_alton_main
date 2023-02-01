@@ -1,12 +1,13 @@
 from PyQt5 import uic
 from PyQt5.QtWidgets import QMainWindow, QApplication, QPlainTextEdit, QLabel, QSlider, QTextEdit, QProgressBar, QStatusBar, QPushButton
 import sys
-import KeyboardControl as kc
+#import KeyboardControl as kc
 
 class UI(QMainWindow):
    def __init__(self):
       super(UI, self).__init__()
       uic.loadUi('Control.ui', self)
+
 
       self.Qland = self.findChild(QPushButton, "Qland")
       self.Etakeoff = self.findChild(QPushButton, "Etakeoff")
@@ -20,17 +21,17 @@ class UI(QMainWindow):
       self.right = self.findChild(QPushButton, "right")
       self.left = self.findChild(QPushButton, "left")
 
-      self.Qland.clicked.connect(self.land)
-      self.Etakeoff.clicked.connect(self.takeoff)
-
-
+   #    self.Qland.clicked.connect(self.land)
+   #    self.Etakeoff.clicked.connect(self.takeoff)
+   #
+   #
       self.show()
-
-   def takeoff(self):
-       kc.me.takeoff()
-
-   def land(self):
-       kc.me.land()
+   #
+   # def takeoff(self):
+   #     kc.me.takeoff()
+   #
+   # def land(self):
+   #     kc.me.land()
 
 
 
